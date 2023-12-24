@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[left=2.5cm,top=2.5cm,right=2.5cm,bottom=2.5cm,nofoot]{geometry}
+\pagestyle{myheadings}
+  
+\usepackage[utf8]{inputenc}      
+
+%Egna paket
+\usepackage[swedish]{babel}
+\usepackage[locale=DE, separate-uncertainty=true, multi-part-units=single]{siunitx}
+\usepackage{amsmath, gensymb, array, siunitx}
+\usepackage{graphicx, float, pgf, subcaption}
+\graphicspath{{./images/}}
+\usepackage{csvsimple, longtable, booktabs, listings}
+\usepackage{enumitem}
+\usepackage{blindtext, comment}
+\usepackage{hyperref, csquotes}
+\hypersetup{hidelinks}
+
+\usepackage[style=ieee]{biblatex}
+\addbibresource{references.bib}
+
+\markright{Oskar Jonsson \& Vidar Petersson, Grupp 16, Uppgift 4}
+
+\begin{document}
+\pagenumbering{gobble} 
+
+\input{chapters/0title}
+
+\newpage
+
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic} 
+\section{Inledning}
+\input{chapters/1inledning}
+
+\section{Teori} \label{sec:teori}
+\input{chapters/2teori}
+
+\section{Metod}
+\input{chapters/3metod}
+
+\section{Resultat}
+\input{chapters/4resultat}
+
+\section{Diskussion}
+\input{chapters/5diskussion}
+
+\section{Slutsats}
+\input{chapters/6slutsats}
+
+\renewcommand*{\UrlFont}{\rmfamily}
+\printbibliography[heading=bibintoc]
+
+\newpage
+\appendix
+\renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+\input{chapters/7appendix}
+
+\end{document}

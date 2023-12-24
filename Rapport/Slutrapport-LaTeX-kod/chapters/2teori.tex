@@ -1,0 +1,33 @@
+Kollisioner mellan kroppar introducerar överföring av rörelsemängd, rörelsemängdsmoment och energi som är centrala inom den klassiska mekaniken. Dessa fenomen beskriver förändring av kroppars translation och rotation i deras rörelsedimensioner och är bevarade ur ett systemspecifikt perspektiv, det vill säga att dessa kroppars förändring av dessa storheter går att förutspå med hjälp av uttryck härledda från Newtons lagar. 
+
+Rörelsemängd är en vektorstorhet, betecknat $\mathbf{p}$, som är vektorprodukten av en kropps massa \emph{m} och dess hastighetsvektor $\mathbf{v}$. Rörelsemängden är bevarad i ett slutet system om inga yttre impulser påverkar systemet vilket innebär att ett system av flera kroppars rörelsemängd kan adderas med avseende på varje kropps enskilda rörelsemängd enligt \cite{Meriam_Kraige_Bolton_2020} %Rätt ställe?
+
+\begin{equation} \label{rörelsemängd}
+    \mathbf{p}= \sum_i m_i\mathbf{v}_i\text.
+\end{equation}
+
+Rörelsemängdsmoment är även det en vektorstorhet som beskriver en kropps rotationstillstånd med avseende på dess massfördelning samt vinkelhastighet. Denna storhet beskrivs generellt med uttrycket
+
+\begin{equation} \label{rörelsemängdsmoment}
+    \mathbf{L}_{O}   = \bar{\mathbf{I}}\boldsymbol{\omega} + \mathbf{r}_{MC} \times \mathbf{p}
+\end{equation}
+
+där $\mathbf{L}_{O}$ är rörelsemängdsmomentet kring en godtycklig punkt i systemet, $\mathbf{r}_{MC}$ är ortsvektorn till kroppens masscentrum och $\mathbf{p}$ är kroppens rörelsemängdsvektor. $\bar{\mathbf{I}}$ är kroppens tröghetsmoment med avseende på masscentrum och $\boldsymbol{\omega}$ är kroppens rotationsvektor med avseende på masscentrum. Rörelsemängdsmoment är likt rörelsemängden bevarad i ett slutet system \cite{Meriam_Kraige_Bolton_2020}. Vid analys av enbart rörelsemängdsmoment kring masscentrum kan den förenklade formeln $\mathbf{L}_{MC} = \bar{\mathbf{I}}\boldsymbol{\omega}$ användas. 
+
+Den totala kinetiska energin för en kropp definieras enligt
+ \begin{equation}\label{kinetiskenergi}
+     T_{\text{tot}} = T_{\text{trans}}+T_{\text{rot}} = \frac{1}{2}mv^2 + \frac{1}{2}\Bar{I}\omega^2
+ \end{equation}
+där parametrarna är de storheter som tidigare definierats i ekvation \eqref{rörelsemängd} och \eqref{rörelsemängdsmoment} för en godtycklig kropp fast utan sina vektoregenskaper vilket leder till att $T$ inte har någon riktning utan enbart är en skalär \cite{Meriam_Kraige_Bolton_2020}.
+
+I ett slutet system är energin enbart bevarad i idealfallet. Detta innebär att i en ideal stöt mellan två kroppar är den totala energi för systemet konstant. I praktiken är en stöt däremot oftast inelastisk och en energiförlust sker på grund av exempelvis plastisk deformation, värme eller ljud. Elasticiteten för en endimensionell stöt beskrivs av stötkoefficienten enligt 
+\begin{equation} \label{ekv:e}
+     e = \frac{v_{\text{rel}}'}{v_{\text{rel}}}
+ \end{equation}
+där $v_{\text{rel}}'$ är relativa hastigheten omedelbart efter och $v_{\text{rel}}$ omedelbart före kollision. Stöt-koefficient med kvot 1 representerar således en perfekt elastisk stöt. I allmänhet betraktas $e$ för stöt mellan två kroppar som en konstant beroende på deras material \cite{Meriam_Kraige_Bolton_2020}. Dock visar en mer rigorös analys att även kollisionshastighet påverkar $e$ \cite{stöte}. För hårda material bestämmer deras elasticitetsgräns den högsta spänning de tål utan att deformeras plastiskt. För små kollisionshastigheter är spänningarna i materialet under elasticitetsgränsen och således uppträder materialet helt elastiskt i likhet med en fjäder och all energi bevaras. Om spänningarna däremot överstiger elasticitetsgränsen kommer enbart en del av energi bevaras, resten förloras till deformation. I kollisioner är impulsen i materialet proportionerligt med $v$. Teoretiskt konvergerar därför $e$ för alla material i 1 för små kollisionshastigheter \cite{Meriam_Kraige_Bolton_2020}. 
+
+
+
+
+%Genom att studera bevarandet av dessa storheter i ett slutet system kan man med hjälp av de uttryck som presenterats bestämma överföringen av rörelsemängd, rörelsemängdsmoment samt energi för kropparna i systemet. Denna teori är därmed essentiell för att studera stötkoefficienten, fördelningen mellan rörelsemängd och rörelsemängdsmoment samt energibevaringen för två kroppar i ett slutet system.
+
